@@ -1,0 +1,105 @@
+/*Nav-bar*/
+.nav-bar {
+    width: 100%;
+    background-color: #424558;
+    /*position: fixed;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar ul {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.nav-bar li {
+    list-style-type: none;
+    float: left;
+    font-family: 'Gugi', cursive;
+}
+
+.nav-bar a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 30px;
+    color: #FFF;
+}
+
+.img-logo {
+    height: 30px;
+    width: 30px;
+    /*margin: 12px;*/
+}
+
+/* Different blocs */
+
+.first-screen {
+    width: 100%;
+    height: 1000px;
+    background-image: url("../assets/img/earth.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: black;
+}
+
+.text-first-screen {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Gugi', cursive;
+    font-size: 25px;
+    letter-spacing: 0.15rem;
+    line-height: 2rem;
+    padding-top: 400px;
+    
+}
+.second-screen {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 1000px;
+    background-color: black;
+    
+}
+
+.second-screen img {
+    width: 400px;
+    
+}
+
+.second-screen h1,
+.second-screen p {
+    width: 400px;
+    text-align: left;
+    font-family: 'Gugi', cursive;
+    font-size: 15px;
+    letter-spacing: 0.15rem;
+    line-height: 1rem;
+
+}
+
+.third-screen {
+    width: 100%;
+    height: 700px;
+    background-image: url("../assets/img/moon.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: black;
+}
+
+.third-screen div {
+    margin: 0 auto;
+    width: 190px;
+    height: 100px;
+    border-radius: 3px;
+}
+
+.third-screen img {
+    margin-right: 100px;
+}
+
+
+main p,
+main h1 {
+    color: white;
+}
