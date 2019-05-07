@@ -63,8 +63,7 @@ const starField = new THREE.Mesh(starGeometry, starMaterial);
 scene.add(starField);
 */
 
-//Camera vector
-const earthVec = new THREE.Vector3(0, 0, 0);
+//Orbit
 let r = 35;
 let theta = 0;
 let dTheta = 2 * Math.PI / 1000;

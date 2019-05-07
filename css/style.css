@@ -1,49 +1,47 @@
-/*Nav-bar*/
+/* Navigation bar */
+
+.active {
+    color: red;
+}
 .nav-bar {
     z-index: 2;
-    width: 100%;
-    background-color: #174064;
-    position: fixed;
     display: flex;
-    flex-direction: row;
+    position: fixed;
+    padding: 0.9rem 1.5625rem;
+    width:100%;
+    background-color: #174064;
 }
 
-.nav-bar ul {
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-}
-
-.nav-bar li {
-    list-style-type: none;
-    float: left;
-    font-family: 'Gugi', cursive;
-}
-
-.nav-bar a {
-    display: inline-block;
+nav a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    padding: 1.25rem 1.875rem;
-    color: #FFF;
+    font-family: 'Gugi', cursive;
+    font-size: 1.1rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+	color: white;
 }
 
-.nav-bar .menu-logo {
-    margin-right: 40px;
+nav .first-rubric {
+	margin-left: 3.75rem;
 }
 
+nav a img {
+    width: 2rem;
+}
+
+nav a p {
+    font-family: 'Gugi', cursive;
+    color: white;
+	margin-left: 1rem;
+}
+
+.nav-bar p:hover {
+    color: red;
+}
 .nav-bar a:hover {
-    border-top: 5px solid #70A7A7;
-    background-color: #0CAADA;
-}
-
-nav li:hover a {
-    padding: 15px 30px 20px 30px;
-}
-
-.img-logo {
-    height: 15px;
-    width: 15px;
-    padding-right: 15px;
+    color: red;
 }
 
 /* Different blocs */
@@ -149,7 +147,6 @@ nav li:hover a {
     line-height: 1.30rem;
     text-align: center;
 }
-
 
 /* Titles and paragraphs */
 

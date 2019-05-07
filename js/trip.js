@@ -33,7 +33,7 @@ slider.oninput = function () {
     output3.innerHTML = means_of_transport;
 }
 
-//Creation of a function to convert milliseconds into a date  with HH:MM:SS:
+//Creation of a function to convert milliseconds into a date with HH:MM:SS:
 
 function msToDate(milliseconds) {
 

@@ -15,14 +15,14 @@
 
 <body>
     <nav class="nav-bar">
-        <ul>
-            <li class="menu-logo"><a href="index.html"><img src="assets/img/logo.png" alt="site-logo"
-                        class="img-logo">Terre / Lune</a></li>
-            <li class="menu-intro"><a href="index.html">Introduction</a></li>
-            <li class="menu-space-view"><a href="space_view.html">Vue de l'espace</a></li>
-            <li class="menu-trip"><a href="trip.html">Le voyage</a></li>
-        </ul>
-    </nav> <br><br><br><br>
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="site logo">
+            <p>Terre / Lune</p>
+        </a>
+        <a href="index.html" class="first-rubric">Introduction</a>
+        <a href="space_view.html">Vue de l'espace</a>
+        <a href="trip.html" class="active">Le voyage</a>
+    </nav>
 
     <main>
 
@@ -39,9 +39,9 @@
             <p>Temps pour aller sur la Lune : <span id="time"></span></p>
             <p>C'est <span id="means_of_transport"></span> qui fait le voyage à cette vitesse !</p>
         </div>
-        
+
     </main>
-    
+
     <!-- Script with the range slider -->
     <script src="js/trip.js"></script>
 
