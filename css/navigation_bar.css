@@ -1,0 +1,45 @@
+/* Navigation bar */
+
+.active {
+    color: red;
+}
+.nav-bar {
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    padding: 0.9rem 1.5625rem;
+    width:100%;
+    background-color: #174064;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Gugi', cursive;
+    font-size: 1.1rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+	color: white;
+}
+
+nav .first-rubric {
+	margin-left: 3.75rem;
+}
+
+nav a img {
+    width: 2rem;
+}
+
+nav a p {
+    font-family: 'Gugi', cursive;
+    color: white;
+	margin-left: 1rem;
+}
+
+.nav-bar p:hover {
+    color: red;
+}
+.nav-bar a:hover {
+    color: red;
+}
