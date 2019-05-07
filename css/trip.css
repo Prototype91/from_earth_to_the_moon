@@ -1,4 +1,4 @@
-/*Nav-bar*/
+/* Nav-bar */
 .nav-bar {
     z-index: 2;
     width: 100%;
@@ -46,18 +46,20 @@ nav li:hover a {
     padding-right: 15px;
 }
 
+/* Body */
+
 main {
     display: flex;
 }
 
 main p {
-    width: 50%;
+    width: 88%;
     text-align: center;
 }
 
 
 
-
+/* Slider */
 
 .slider {
     -webkit-appearance: none;
@@ -92,8 +94,27 @@ main p {
 .slidecontainer {
     width: 90%;
     margin-right: 10%;
+    margin-top: 200px;
 }
+
+/* Text Slider */
+
 .slidecontainer p {
+    font-family: 'Orbitron', sans-serif;
     text-align: left;
     margin-top: 20px;
+    width: 100%;
+}
+
+.instructions {
+    width: 100%;
+    font-family: 'Gugi', cursive;
+    font-size: 1.5rem;
+    margin-top: 200px;
+    margin-left: 100px;
+
+}
+
+.instructions h1 {
+    text-align: center;
 }
