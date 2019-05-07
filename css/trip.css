@@ -60,7 +60,7 @@ main p {
 .slider {
     -webkit-appearance: none;
     width: 100%;
-    height: 15px;
+    height: 0.9rem;
     border-radius: 5px;
     background: #d3d3d3;
     outline: none;
@@ -72,16 +72,16 @@ main p {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 1.56rem;
+    height: 1.56rem;
     border-radius: 50%;
     background: #0CAADA;
     cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
+    width: 1.56rem;
+    height: 1.56rem;
     border-radius: 50%;
     background: #4CAF50;
     cursor: pointer;
@@ -90,7 +90,7 @@ main p {
 .slidecontainer {
     width: 90%;
     margin-right: 10%;
-    margin-top: 200px;
+    margin-top: 12.5rem;
 }
 
 /* Text Slider */
@@ -98,7 +98,7 @@ main p {
 .slidecontainer p {
     font-family: 'Orbitron', sans-serif;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
 }
 .slidecontainer span {
@@ -109,8 +109,8 @@ main p {
     width: 100%;
     font-family: 'Gugi', cursive;
     font-size: 1.5rem;
-    margin-top: 200px;
-    margin-left: 100px;
+    margin-top: 12.5rem;
+    margin-left: 6.25rem;
 }
 
 .instructions h1 {

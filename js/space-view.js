@@ -50,26 +50,10 @@ moon.position.set(35, 0, 0);
 //The Moon is added to the scene
 scene.add(moon);
 
-/** 
-//Stars
-const starGeometry = new THREE.SphereGeometry(1000, 50, 50);
-const starMaterial = new THREE.MeshPhongMaterial({
-  map: new THREE.ImageUtils.loadTexture("../assets/img/stars-1920x1080.jpg"),
-  side: THREE.DoubleSide,
-  shininess: 0
-});
-
-const starField = new THREE.Mesh(starGeometry, starMaterial);
-scene.add(starField);
-*/
-
 //Orbit
 let r = 35;
 let theta = 0;
 let dTheta = 2 * Math.PI / 1000;
-let dx = .01;
-let dy = -.01;
-let dz = -.05;
 
 //Function Render : 
 function render() {

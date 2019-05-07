@@ -87,7 +87,7 @@ nav a p {
     width: 25rem;
     text-align: left;
     font-family: 'Gugi', cursive;
-    font-size: 15px;
+    font-size: 0.9rem;
     letter-spacing: 0.15rem;
     line-height: 1.25rem;
 }
@@ -98,9 +98,9 @@ nav a p {
 
 .apollo-article {
     align-self: flex-start;
-    margin-left: 100px;
-    margin-top: 500px;
-    margin-bottom: 500px;
+    margin-left: 6.25rem;
+    margin-top: 31.25rem;
+    margin-bottom: 31.25rem;
 }
 
 .jules-vernes-article img {
@@ -109,7 +109,7 @@ nav a p {
 
 .jules-vernes-article,
 .china-article {
-    margin-right:100px;
+    margin-right:6.25rem;
 }
 
 /* Third bloc */
@@ -119,7 +119,7 @@ nav a p {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 700px;
+    height: 43.75rem;
     background-image: url("../assets/img/moon.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -132,8 +132,8 @@ nav a p {
 }
 
 .two-img img {
-    margin-left: 100px;
-    margin-bottom: 100px;
+    margin-left: 6.25rem;
+    margin-bottom: 6.25rem;
 }
 
 .text-end {
@@ -142,7 +142,7 @@ nav a p {
 
 .text-end p {
     font-family: 'Gugi', cursive;
-    font-size: 15px;
+    font-size: 0.9rem;
     letter-spacing: 0.15rem;
     line-height: 1.30rem;
     text-align: center;

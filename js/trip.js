@@ -8,7 +8,7 @@ let output3 = document.getElementById("means_of_transport");
 let distance = 384400;
 
 //Default value of the slider (for the mean of transport) :
-let means_of_transport = "un homme à pied"
+let means_of_transport = "un homme à pied";
 
 output.innerHTML = slider.value;
 //value time to go to the moon
