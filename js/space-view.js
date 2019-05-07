@@ -22,27 +22,13 @@ const light2 = new THREE.PointLight(0x0000ff, 1);
 light2.position.set(-30, 10, 20);
 scene.add(light2);
 
-// --- plateau
-const geometry = new THREE.PlaneGeometry(100, 100);
 const material = new THREE.MeshLambertMaterial({
   color: 0xffffff
 });
-const plane = new THREE.Mesh(geometry, material);
-plane.translateY(-10);
-plane.rotateX(THREE.Math.degToRad(-90));
 
-const sphere = new THREE.Mesh(new THREE.SphereGeometry(10, 16, 16), material);
-sphere.position.set(20, 0, 0);
+const sphere = new THREE.Mesh(new THREE.SphereGeometry(16, 16, 16), material);
+sphere.position.set(5, -20, 0);
 
-const box = new THREE.Mesh(new THREE.TorusKnotGeometry(10, 3, 100, 16), material);
-box.position.set(-20, 0, 0);
-
-const torus = new THREE.Mesh(new THREE.IcosahedronGeometry(10), material);
-torus.position.set(20, 0, 30);
-
-const cylinder = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, 20, 16), material);
-cylinder.position.set(-20, 0, 30);
-
-scene.add(plane, sphere, box, torus, cylinder);
+scene.add(sphere);
 
 renderer.render(scene, camera);

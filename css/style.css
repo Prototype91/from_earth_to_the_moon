@@ -1,5 +1,6 @@
 /*Nav-bar*/
 .nav-bar {
+    z-index: 2;
     width: 100%;
     background-color: #174064;
     position: fixed;
@@ -26,9 +27,13 @@
     color: #FFF;
 }
 
+.nav-bar .menu-logo {
+    margin-right: 40px;
+}
+
 .nav-bar a:hover {
-    border-top: 5px solid grey;
-    background-color: blue;
+    border-top: 5px solid #70A7A7;
+    background-color: #0CAADA;
 }
 
 nav li:hover a {
@@ -86,7 +91,7 @@ nav li:hover a {
     font-family: 'Gugi', cursive;
     font-size: 15px;
     letter-spacing: 0.15rem;
-    line-height: 1rem;
+    line-height: 1.25rem;
 }
 
 .second-screen {
@@ -119,7 +124,7 @@ nav li:hover a {
     height: 700px;
     background-image: url("../assets/img/moon.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100%;
     background-color: black;
 }
 
@@ -135,7 +140,6 @@ nav li:hover a {
 
 .text-end {
     width: 50%;
-
 }
 
 .text-end p {
@@ -158,3 +162,12 @@ main h1 {
     padding-top: 2rem;
 }
 
+.line {
+    z-index: 1;
+    position: absolute;
+    height: 2800px;
+    top: 850px;
+    border-right: 4px ridge white;
+    left: 775px;
+    
+}

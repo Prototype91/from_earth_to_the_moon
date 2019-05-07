@@ -2,12 +2,13 @@
 <html lang="fr">
 
 <head>
+    <link rel="shortcut icon" href="assets/img/favico.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Terre / Lune - Le Voyage</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/trip.css">
     <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
 </head>
 
@@ -20,7 +21,27 @@
             <li class="menu-space-view"><a href="space_view.html">Vue de l'espace</a></li>
             <li class="menu-trip"><a href="the_trip.html">Le voyage</a></li>
         </ul>
-    </nav>
+    </nav> <br><br><br><br>
+
+    <main>
+
+        <div>
+            <p>Faisons le voyage ensemble
+                A l’aide du slider, sélectionnez la vitesse que vous désirez pour
+                faire le voyage de la Terre à la Lune. Nous calculerons pour vous la
+                durée du voyage et le mode de transport qui correspond.</p>
+
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="10" max="5500" value="10" class="slider" id="myRange">
+            <p>Vitesse : <span id="demo"></span> km/h</p>
+            <p>Temps pour aller sur la lune : <span id="time"></span></p>
+        </div>
+
+    </main>
+
+    <script src="js/trip.js"></script>
+
 </body>
 
 </html>
