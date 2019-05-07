@@ -57,8 +57,6 @@ main p {
     text-align: center;
 }
 
-
-
 /* Slider */
 
 .slider {
@@ -105,6 +103,9 @@ main p {
     margin-top: 20px;
     width: 100%;
 }
+.slidecontainer span {
+    font-weight: bold;
+}
 
 .instructions {
     width: 100%;
@@ -112,7 +113,6 @@ main p {
     font-size: 1.5rem;
     margin-top: 200px;
     margin-left: 100px;
-
 }
 
 .instructions h1 {
