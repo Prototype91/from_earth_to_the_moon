@@ -55,6 +55,9 @@ let r = 35;
 let theta = 0;
 let dTheta = 2 * Math.PI / 1000;
 
+//Orbit Controls
+const orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
+
 //Function Render : 
 function render() {
 
@@ -66,7 +69,7 @@ function render() {
   theta += dTheta;
   moon.position.x = r * Math.cos(theta);
   moon.position.z = r * Math.sin(theta);
-  
+
   //Rendering of the space view with the loop 
   renderer.render(scene, camera);
   requestAnimationFrame(render);
