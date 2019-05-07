@@ -1,8 +1,8 @@
 //Creation of the scene
-let scene = new THREE.Scene();
+const scene = new THREE.Scene();
 
 //Creation of the camera
-let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
 
 //The camera is added to the scene
 scene.add(camera);
@@ -11,47 +11,60 @@ scene.add(camera);
 camera.position.set(0, 0, 70);
 
 //Creation of the rederer
-let renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 //Creations of the lights
-let ambientLight = new THREE.AmbientLight(0xf1f1f1);
+const ambientLight = new THREE.AmbientLight(0xf1f1f1);
 scene.add(ambientLight);
 
-let spotLight = new THREE.DirectionalLight(0xffffff);
+const spotLight = new THREE.DirectionalLight(0xffffff);
 spotLight.position.set(50, 50, 50);
 scene.add(spotLight);
 
 //Creation of Earth
-let earthGeometry = new THREE.SphereGeometry(10, 50, 50);
+const earthGeometry = new THREE.SphereGeometry(10, 50, 50);
 
-let earthMaterial = new THREE.MeshPhongMaterial({
+const earthMaterial = new THREE.MeshPhongMaterial({
   map: new THREE.ImageUtils.loadTexture("../assets/img/texture_earth-5400x2700.jpg"),
   color: 0xf2f2f2,
   specular: 0xbbbbbb,
   shininess: 2
 });
 
-let earth = new THREE.Mesh(earthGeometry, earthMaterial);
+const earth = new THREE.Mesh(earthGeometry, earthMaterial);
 
 //Earth added to the scene
 scene.add(earth);
 
 //Creation of the Moon
-let moonGeometry = new THREE.SphereGeometry(3.5, 50, 50);
-let moonMaterial = new THREE.MeshPhongMaterial({
+const moonGeometry = new THREE.SphereGeometry(3.5, 50, 50);
+const moonMaterial = new THREE.MeshPhongMaterial({
   map: THREE.ImageUtils.loadTexture("../assets/img/texture_moon-2048x1024.jpg")
 });
 
-let moon = new THREE.Mesh(moonGeometry, moonMaterial);
+const moon = new THREE.Mesh(moonGeometry, moonMaterial);
 moon.position.set(35, 0, 0);
 
 //The Moon is added to the scene
 scene.add(moon);
 
+/** 
+//Stars
+const starGeometry = new THREE.SphereGeometry(1000, 50, 50);
+const starMaterial = new THREE.MeshPhongMaterial({
+  map: new THREE.ImageUtils.loadTexture("../assets/img/stars-1920x1080.jpg"),
+  side: THREE.DoubleSide,
+  shininess: 0
+});
+
+const starField = new THREE.Mesh(starGeometry, starMaterial);
+scene.add(starField);
+*/
+
 //Camera vector
-let earthVec = new THREE.Vector3(0, 0, 0);
+const earthVec = new THREE.Vector3(0, 0, 0);
 let r = 35;
 let theta = 0;
 let dTheta = 2 * Math.PI / 1000;
@@ -60,17 +73,18 @@ let dy = -.01;
 let dz = -.05;
 
 //Function Render : 
-let render = function () {
+function render() {
 
-  //Rotation of Earth
+  //Rotation of Earth and the Moon
   earth.rotation.y += .0009;
+  moon.rotation.y += .0009
 
-  //Rotation of the Moon       
+  //Orbit of the Moon       
   theta += dTheta;
   moon.position.x = r * Math.cos(theta);
   moon.position.z = r * Math.sin(theta);
   
-  //Rendering of the space view
+  //Rendering of the space view with the loop 
   renderer.render(scene, camera);
   requestAnimationFrame(render);
 
