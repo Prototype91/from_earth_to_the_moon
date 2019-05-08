@@ -45,10 +45,23 @@ const moonMaterial = new THREE.MeshPhongMaterial({
 });
 
 const moon = new THREE.Mesh(moonGeometry, moonMaterial);
+
+//Set the Moon position :
 moon.position.set(35, 0, 0);
 
 //The Moon is added to the scene
 scene.add(moon);
+
+//Background (starfield) :
+
+//Creation of the loader :
+const loader = new THREE.TextureLoader();
+
+//load the background :
+const starfield = loader.load("../assets/img/stars-1920x1080.jpg");
+
+//Add the background to the scene :
+scene.background = starfield;
 
 //Orbit
 let r = 35;
