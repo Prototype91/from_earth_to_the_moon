@@ -1,8 +1,8 @@
 //Creation of the different variables and outputs to display specific values :
 let slider = document.getElementById("myRange");
-let output = document.getElementById("demo");
-let output2 = document.getElementById("time");
-let output3 = document.getElementById("means_of_transport");
+let speed_output = document.getElementById("speed");
+let time_output = document.getElementById("time");
+let means_of_transport_output = document.getElementById("means_of_transport");
 
 //Distance Earth / Moon in km:
 let distance = 384400;
@@ -10,11 +10,11 @@ let distance = 384400;
 //Default value of the slider (for the mean of transport) :
 let means_of_transport = "un homme à pied";
 
-output.innerHTML = slider.value;
+speed_output.innerHTML = slider.value;
 //value time to go to the moon
 //the amount of milliseconds is needed to create the final date
-output2.innerHTML = msToDate((distance / slider.value) * 3600000);
-output3.innerHTML = means_of_transport;
+time_output.innerHTML = msToDate((distance / slider.value) * 3600000);
+means_of_transport_output.innerHTML = means_of_transport;
 
 //Function to display in the html all the specific values :
 
@@ -28,9 +28,9 @@ slider.oninput = function () {
     if(slider.value > 740 && slider.value <= 1185) means_of_transport = 'un avion de ligne A380';
     if(slider.value > 1185 && slider.value <= 5500) means_of_transport = 'la fusée Apollo 11';
 
-    output.innerHTML = this.value;
-    output2.innerHTML = msToDate((distance / slider.value) * 3600000); //value in milliseconds
-    output3.innerHTML = means_of_transport;
+    speed_output.innerHTML = this.value;
+    time_output.innerHTML = msToDate((distance / slider.value) * 3600000); //value in milliseconds
+    means_of_transport_output.innerHTML = means_of_transport;
 }
 
 //Creation of a function to convert milliseconds into a date with HH:MM:SS:
@@ -52,5 +52,6 @@ function msToDate(milliseconds) {
     let absoluteSeconds = Math.floor(seconds);
     let s = absoluteSeconds > 9 ? absoluteSeconds : '0' + absoluteSeconds;
 
+    //Returns the amount of time : HH:MM:SS
     return h + 'h ' + m + 'min ' + s + 'sec';
 }

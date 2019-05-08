@@ -23,7 +23,7 @@ const spotLight = new THREE.DirectionalLight(0xffffff);
 spotLight.position.set(50, 50, 50);
 scene.add(spotLight);
 
-//Creation of the loader for textures :
+//Creation of the loader for textures and the background :
 const loader = new THREE.TextureLoader();
 
 //Creation of Earth
@@ -91,7 +91,7 @@ function render() {
 
   //Rotation of Earth and the Moon
   earth.rotation.y += .0009;
-  moon.rotation.y += .0009
+  moon.rotation.y += .001
 
   //Orbit of the Moon       
   theta += dTheta;
@@ -101,7 +101,7 @@ function render() {
   //Rendering of the space view with the loop 
   renderer.render(scene, camera);
   requestAnimationFrame(render);
-
+  
 };
 
 //Rendering :

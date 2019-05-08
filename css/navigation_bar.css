@@ -1,7 +1,7 @@
 /* Navigation bar */
 
 .active {
-    color: red;
+    color: #64DBE7;
 }
 .nav-bar {
     z-index: 2;
@@ -38,8 +38,8 @@ nav a p {
 }
 
 .nav-bar p:hover {
-    color: red;
+    color: #64DBE7;
 }
 .nav-bar a:hover {
-    color: red;
+    color: #64DBE7;
 }
