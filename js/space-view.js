@@ -23,27 +23,45 @@ const spotLight = new THREE.DirectionalLight(0xffffff);
 spotLight.position.set(50, 50, 50);
 scene.add(spotLight);
 
+//Creation of the loader for textures :
+const loader = new THREE.TextureLoader();
+
 //Creation of Earth
+
+//Earth geometry :
 const earthGeometry = new THREE.SphereGeometry(10, 50, 50);
 
+//Earth texture :
+const earthTexture = loader.load("../assets/img/texture_earth-5400x2700.jpg");
+
+//Earth material
 const earthMaterial = new THREE.MeshPhongMaterial({
-  map: new THREE.ImageUtils.loadTexture("../assets/img/texture_earth-5400x2700.jpg"),
+  map: earthTexture,
   color: 0xf2f2f2,
   specular: 0xbbbbbb,
   shininess: 2
 });
 
+//Earth Planet
 const earth = new THREE.Mesh(earthGeometry, earthMaterial);
 
 //Earth added to the scene
 scene.add(earth);
 
 //Creation of the Moon
+
+//Moon geometry :
 const moonGeometry = new THREE.SphereGeometry(3.5, 50, 50);
+
+//Moon texture :
+const moonTexture = loader.load("../assets/img/texture_moon-2048x1024.jpg")
+
+//Moon material :
 const moonMaterial = new THREE.MeshPhongMaterial({
-  map: THREE.ImageUtils.loadTexture("../assets/img/texture_moon-2048x1024.jpg")
+  map: moonTexture
 });
 
+//Moon Planet
 const moon = new THREE.Mesh(moonGeometry, moonMaterial);
 
 //Set the Moon position :
@@ -53,9 +71,6 @@ moon.position.set(35, 0, 0);
 scene.add(moon);
 
 //Background (starfield) :
-
-//Creation of the loader :
-const loader = new THREE.TextureLoader();
 
 //load the background :
 const starfield = loader.load("../assets/img/stars-1920x1080.jpg");
