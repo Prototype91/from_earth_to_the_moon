@@ -1,5 +1,6 @@
 /* Different blocs */
 
+
 /* First bloc */
 
 .first-screen {
@@ -20,8 +21,8 @@
     letter-spacing: 0.15rem;
     line-height: 2rem;
     padding-top: 25rem;
-    
 }
+
 
 /* Second bloc */
 
@@ -64,8 +65,9 @@
 
 .jules-vernes-article,
 .china-article {
-    margin-right:6.25rem;
+    margin-right: 6.25rem;
 }
+
 
 /* Third bloc */
 
@@ -103,6 +105,7 @@
     text-align: center;
 }
 
+
 /* Titles and paragraphs */
 
 main p,
@@ -114,6 +117,7 @@ main h1 {
     padding-top: 2rem;
 }
 
+
 /* Line */
 
 .line {
@@ -123,7 +127,29 @@ main h1 {
     left: 50vw;
     height: 175rem;
     border-right: 4px ridge white;
-    
-    
 }
 
+
+/* Circles */
+
+.top-circle {
+    z-index: 1;
+    position: absolute;
+    top: 52.5rem;
+    left: 48.85vw;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.bottom-circle {
+    z-index: 1;
+    position: absolute;
+    top: 227rem;
+    left: 48.75vw;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: white;
+}

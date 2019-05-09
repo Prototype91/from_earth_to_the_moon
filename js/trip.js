@@ -58,13 +58,13 @@ slider.oninput = function () {
         }
     }
 
-    //We display the appropriated informations fot the users :
+    //We display the appropriated informations for the user :
 
     //Speed
     speed_output.innerHTML = this.value;
 
     //Time
-    time_output.innerHTML = msToDate((distance / slider.value) * oneHourInMs); //value in milliseconds
+    time_output.innerHTML = msToDate((distance / slider.value) * oneHourInMs);
 
     //Mean of transport
     means_of_transport_output.innerHTML = means_of_transport;

@@ -3,12 +3,13 @@
 .active {
     color: #64DBE7;
 }
+
 .nav-bar {
     z-index: 3;
     display: flex;
     position: fixed;
     padding: 0.9rem 1.5625rem;
-    width:100%;
+    width: 100%;
     background-color: #174064;
 }
 
@@ -20,11 +21,11 @@ nav a {
     font-size: 1.1rem;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
-	color: white;
+    color: white;
 }
 
 nav .first-rubric {
-	margin-left: 3.75rem;
+    margin-left: 3.75rem;
 }
 
 nav a img {
@@ -34,12 +35,13 @@ nav a img {
 nav a p {
     font-family: 'Orbitron', sans-serif;
     color: white;
-	margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 .nav-bar p:hover {
     color: #64DBE7;
 }
+
 .nav-bar a:hover {
     color: #64DBE7;
 }
