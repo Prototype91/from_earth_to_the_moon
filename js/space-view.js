@@ -91,7 +91,7 @@ function render() {
 
   //Rotation of Earth and the Moon
   earth.rotation.y += .0009;
-  moon.rotation.y += .001
+  moon.rotation.y += .0009;
 
   //Orbit of the Moon       
   theta += dTheta;

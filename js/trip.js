@@ -4,40 +4,79 @@ let speed_output = document.getElementById("speed");
 let time_output = document.getElementById("time");
 let means_of_transport_output = document.getElementById("means_of_transport");
 
-//Distance Earth / Moon in km:
-let distance = 384400;
+//Array with all the means of transport :
+const all_means_of_transport = [
+    { name: "un homme à pied", speed: 10 },
+    { name: "un cheval pur-sang", speed: 65 },
+    { name: "une voiture Ferrari", speed: 325 },
+    { name: "un avion jet", speed: 740 },
+    { name: "un avion de ligne A380", speed: 1185 },
+    { name: "la fusée Apollo 11", speed: 5500 }
+];
+
+//Distance Earth / Moon in km :
+const distance = 384400;
+
+//One hour in Milliseconds :
+const oneHourInMs = 3600000;
 
 //Default value of the slider (for the mean of transport) :
-let means_of_transport = "un homme à pied";
-
 speed_output.innerHTML = slider.value;
+
 //value time to go to the moon
 //the amount of milliseconds is needed to create the final date
-time_output.innerHTML = msToDate((distance / slider.value) * 3600000);
-means_of_transport_output.innerHTML = means_of_transport;
+time_output.innerHTML = msToDate((distance / slider.value) * oneHourInMs);
+
+//Initial mean of transport
+means_of_transport_output.innerHTML = "un homme à pied";
 
 //Function to display in the html all the specific values :
 
 slider.oninput = function () {
 
-    //Conditions to know wich mean of transport is appropriated :
-    if(slider.value <= 10) means_of_transport = 'un homme à pied';
-    if(slider.value > 10 && slider.value <= 65) means_of_transport = 'un cheval pur-sang';
-    if(slider.value > 65 && slider.value <= 325) means_of_transport = 'une voiture Ferrari';
-    if(slider.value > 325 && slider.value <= 740) means_of_transport = 'un avion jet';
-    if(slider.value > 740 && slider.value <= 1185) means_of_transport = 'un avion de ligne A380';
-    if(slider.value > 1185 && slider.value <= 5500) means_of_transport = 'la fusée Apollo 11';
+    //We create variables to know wich mean of transport is appropriated :
+    let currentSpeed = all_means_of_transport[0].speed;
+    let means_of_transport = all_means_of_transport[0].name;
+    let differenceMin = Math.abs(slider.value - currentSpeed);
+    let difference = 0;
 
+    for (let i = 1; i < all_means_of_transport.length; i++) {
+
+        //We set the difference between the current speed and the speed of means of transport 
+        difference = Math.abs(slider.value - all_means_of_transport[i].speed);
+
+        if (difference < differenceMin) {
+
+            //Current speed
+            currentSpeed = all_means_of_transport[i].speed;
+
+            //Difference of speed
+            differenceMin = difference;
+
+            //Mean of transport appropriated
+            means_of_transport = all_means_of_transport[i].name;
+        }
+    }
+
+    //We display the appropriated informations fot the users :
+
+    //Speed
     speed_output.innerHTML = this.value;
-    time_output.innerHTML = msToDate((distance / slider.value) * 3600000); //value in milliseconds
+
+    //Time
+    time_output.innerHTML = msToDate((distance / slider.value) * oneHourInMs); //value in milliseconds
+
+    //Mean of transport
     means_of_transport_output.innerHTML = means_of_transport;
+
 }
+
 
 //Creation of a function to convert milliseconds into a date with HH:MM:SS:
 
 function msToDate(milliseconds) {
 
-    //Convert hours into milliseconds
+    //Get hours from milliseconds
     let hours = milliseconds / (1000 * 60 * 60);
     let absoluteHours = Math.floor(hours);
     let h = absoluteHours > 9 ? absoluteHours : '0' + absoluteHours;
