@@ -54,7 +54,7 @@ scene.add(earth);
 const moonGeometry = new THREE.SphereGeometry(3.5, 50, 50);
 
 //Moon texture :
-const moonTexture = loader.load("../assets/img/texture_moon-2048x1024.jpg")
+const moonTexture = loader.load("../assets/img/texture_moon-2048x1024.jpg");
 
 //Moon material :
 const moonMaterial = new THREE.MeshPhongMaterial({

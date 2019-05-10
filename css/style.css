@@ -127,7 +127,7 @@ main h1 {
     top: 53.125rem;
     left: 50vw;
     height: 175rem;
-    border-right: 4px ridge white;
+    border-right: 4px dashed white;
 }
 
 
@@ -137,7 +137,7 @@ main h1 {
     z-index: 1;
     position: absolute;
     top: 52.5rem;
-    left: 48.85vw;
+    left: 50vw;
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
@@ -148,9 +148,13 @@ main h1 {
     z-index: 1;
     position: absolute;
     top: 227rem;
-    left: 48.75vw;
+    left: 50vw;
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
     background-color: white;
+}
+
+.transformation {
+    transform: translateX(-1.15rem);
 }
