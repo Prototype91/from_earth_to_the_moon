@@ -127,7 +127,7 @@ main h1 {
     top: 53.125rem;
     left: 50vw;
     height: 175rem;
-    border-right: 4px dashed white;
+    border-right: 0.25rem dashed white;
 }
 
 
@@ -155,6 +155,12 @@ main h1 {
     background-color: white;
 }
 
-.transformation {
-    transform: translateX(-1.14rem);
+/* Puts the circles and the line in the middle of the screen */
+
+.transformation-circles {
+    transform: translateX(-1.25rem);
+}
+
+.transformation-line {
+    transform: translateX(-0.125rem);
 }

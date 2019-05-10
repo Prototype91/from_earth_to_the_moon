@@ -1,14 +1,4 @@
-//Creation of the loader for textures and the background :
-const loader = new THREE.TextureLoader();
 
-//Earth texture :
-const earthTexture = loader.load("../assets/img/texture_earth-5400x2700.jpg");
-
-//Moon texture :
-const moonTexture = loader.load("../assets/img/texture_moon-2048x1024.jpg");
-
-//load the background :
-const starfield = loader.load("../assets/img/stars-1920x1080.jpg");
 
 //Creation of the scene
 const scene = new THREE.Scene();
@@ -21,6 +11,42 @@ scene.add(camera);
 
 //Position of the camera
 camera.position.set(0, 0, 70);
+
+//Creation of the loader for textures and the background :
+const loader = new THREE.TextureLoader();
+
+let earth;
+
+//Earth texture :
+loader.load("../assets/img/texture_earth-5400x2700.jpg", function (earthTexture) {
+
+  //Creation of Earth
+
+  //Earth geometry :
+  const earthGeometry = new THREE.SphereGeometry(10, 50, 50);
+
+  //Earth material
+  const earthMaterial = new THREE.MeshPhongMaterial({
+    map: earthTexture,
+    color: 0xf2f2f2,
+    specular: 0xbbbbbb,
+    shininess: 2
+  });
+
+  //Earth Planet
+  earth = new THREE.Mesh(earthGeometry, earthMaterial);
+
+  //Earth added to the scene
+  scene.add(earth);
+
+});
+
+//Moon texture :
+const moonTexture = loader.load("../assets/img/texture_moon-2048x1024.jpg");
+
+//load the background :
+const starfield = loader.load("../assets/img/stars-1920x1080.jpg");
+
 
 //Creation of the rederer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -35,24 +61,7 @@ const spotLight = new THREE.DirectionalLight(0xffffff);
 spotLight.position.set(50, 50, 50);
 scene.add(spotLight);
 
-//Creation of Earth
 
-//Earth geometry :
-const earthGeometry = new THREE.SphereGeometry(10, 50, 50);
-
-//Earth material
-const earthMaterial = new THREE.MeshPhongMaterial({
-  map: earthTexture,
-  color: 0xf2f2f2,
-  specular: 0xbbbbbb,
-  shininess: 2
-});
-
-//Earth Planet
-const earth = new THREE.Mesh(earthGeometry, earthMaterial);
-
-//Earth added to the scene
-scene.add(earth);
 
 //Creation of the Moon
 
@@ -88,19 +97,23 @@ const orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
 //Function Render : 
 function render() {
 
-  //Rotation of Earth and the Moon
-  earth.rotation.y += .0009;
-  moon.rotation.y += .0009;
+  if (earth) {
 
-  //Orbit of the Moon       
-  theta += dTheta;
-  moon.position.x = r * Math.cos(theta);
-  moon.position.z = r * Math.sin(theta);
+    //Rotation of Earth and the Moon
+    earth.rotation.y += .0009;
+    moon.rotation.y += .0009;
+
+    //Orbit of the Moon       
+    theta += dTheta;
+    moon.position.x = r * Math.cos(theta);
+    moon.position.z = r * Math.sin(theta);
+
+  }
 
   //Rendering of the space view with the loop 
   renderer.render(scene, camera);
   requestAnimationFrame(render);
-  
+
 };
 
 //Rendering :
