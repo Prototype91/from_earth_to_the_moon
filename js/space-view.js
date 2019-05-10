@@ -1,5 +1,3 @@
-
-
 //Creation of the scene
 const scene = new THREE.Scene();
 
@@ -60,8 +58,6 @@ scene.add(ambientLight);
 const spotLight = new THREE.DirectionalLight(0xffffff);
 spotLight.position.set(50, 50, 50);
 scene.add(spotLight);
-
-
 
 //Creation of the Moon
 
