@@ -20,7 +20,7 @@ const distance = 384400;
 //One hour in Milliseconds :
 const oneHourInMs = 3600000;
 
-//Default value of the slider (for the mean of transport) :
+//Default value of the slider (for the speed) :
 speed_output.innerHTML = slider.value;
 
 //value time to go to the moon
@@ -30,7 +30,7 @@ time_output.innerHTML = msToDate((distance / slider.value) * oneHourInMs);
 //Initial mean of transport
 means_of_transport_output.innerHTML = "un homme à pied";
 
-//Function to display in the html all the specific values :
+//Function to display all the specific values :
 
 slider.oninput = function () {
 

@@ -86,6 +86,7 @@
 .two-img {
     display: flex;
     align-items: center;
+    margin-right: 6.25rem;
 }
 
 .two-img img {
@@ -94,14 +95,14 @@
 }
 
 .text-end {
-    width: 50%;
+    width: 60%;
 }
 
 .text-end p {
     font-family: 'Gugi', cursive;
-    font-size: 0.9rem;
+    font-size: 2rem;
     letter-spacing: 0.15rem;
-    line-height: 1.30rem;
+    line-height: 3rem;
     text-align: center;
 }
 
