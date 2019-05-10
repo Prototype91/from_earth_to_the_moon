@@ -1,6 +1,6 @@
 # From Earth to the Moon
 
-Exams - Lecomte Dylan - l'École Multimédia, 06.05.19.
+Exams - Lecomte Dylan - l'École Multimédia, 06.05.19
 
 # Subject : 
 
@@ -9,9 +9,11 @@ as subject the journey from Earth to the Moon.
 
 # Installation :
 
+`clone` or `download` this repository.
+
 `npm install` in your terminal to have all the packages needed in you computer.
 
-#Execution : 
+# Execution : 
 
 `npm start` in your terminal to start `live-server` on your machine.
 
