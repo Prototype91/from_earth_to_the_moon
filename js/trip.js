@@ -40,6 +40,7 @@ slider.oninput = function () {
     let differenceMin = Math.abs(slider.value - currentSpeed);
     let difference = 0;
 
+    //Loop to know which mean of transport has the speed appropriated to the current speed of the slider :
     for (let i = 1; i < all_means_of_transport.length; i++) {
 
         //We set the difference between the current speed and the speed of means of transport 
@@ -70,7 +71,6 @@ slider.oninput = function () {
     means_of_transport_output.innerHTML = means_of_transport;
 
 }
-
 
 //Creation of a function to convert milliseconds into a date with HH:MM:SS:
 

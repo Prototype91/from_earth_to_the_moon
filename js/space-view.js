@@ -13,6 +13,7 @@ camera.position.set(0, 0, 70);
 //Creation of the loader for textures and the background :
 const loader = new THREE.TextureLoader();
 
+//Variable of planet Earth :
 let earth;
 
 //Earth texture :
@@ -44,7 +45,6 @@ const moonTexture = loader.load("../assets/img/texture_moon-2048x1024.jpg");
 
 //load the background :
 const starfield = loader.load("../assets/img/stars-1920x1080.jpg");
-
 
 //Creation of the rederer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -82,7 +82,7 @@ scene.add(moon);
 //Add the background to the scene :
 scene.background = starfield;
 
-//Orbit
+//Orbit of the moon variables
 let r = 35;
 let theta = 0;
 let dTheta = 2 * Math.PI / 1000;
@@ -99,7 +99,7 @@ function render() {
     earth.rotation.y += .0009;
     moon.rotation.y += .0009;
 
-    //Orbit of the Moon       
+    //Orbit of the Moon     
     theta += dTheta;
     moon.position.x = r * Math.cos(theta);
     moon.position.z = r * Math.sin(theta);
